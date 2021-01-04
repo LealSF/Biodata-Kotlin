@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addBioActivity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/photoView"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_camera"
+        app:c_border="true"
+        app:c_border_width="5dp"
+        app:c_border_color="@color/gray"/>
+
+<!-- Masukan Nama  -->
+    <EditText
+        android:id="@+id/NameT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kotak"
+        android:layout_below="@id/photoView"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:hint="Masukan Nama"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="10dp"/>
+
+<!--  Masukan ALamat  -->
+    <EditText
+        android:id="@+id/AlamatEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kotak"
+        android:layout_below="@id/NameT"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:hint="Masukan Alamat"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="10dp"/>
+
+<!--  Masukan Email  -->
+    <EditText
+        android:id="@+id/EmailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kotak"
+        android:layout_below="@id/AlamatEt"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:hint="Masukan Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"/>
+
+<!--  Masukan nomor hp  -->
+    <EditText
+        android:id="@+id/PhoneEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kotak"
+        android:layout_below="@id/EmailEt"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:hint="Masukan Nomor Telepon"
+        android:inputType="phone"
+        android:padding="10dp"/>
+
+<!--  Tanggal Lahir  -->
+    <EditText
+        android:id="@+id/LahirEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kotak"
+        android:layout_below="@id/PhoneEt"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:hint="Tanggal Lahir dd/mm/yy"
+        android:inputType="date"
+        android:padding="10dp"/>
+
+<!--  Tempat Lahir  -->
+    <EditText
+        android:id="@+id/TempatEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kotak"
+        android:layout_below="@id/LahirEt"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:hint="Tempat Lahir"
+        android:inputType="text"
+        android:padding="10dp"/>
+
+<!--   Jenis Kelamin     -->
+   <TextView
+       android:id="@+id/text1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/TempatEt"
+       android:layout_marginTop="15dp"
+       android:layout_marginEnd="15dp"
+       android:layout_marginStart="20dp"
+       android:text="Jenis Kelamin"/>
+    <RadioGroup
+        android:id="@+id/radioGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="20dp">
+        <RadioButton
+            android:id="@+id/rdLaki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki - laki"/>
+
+        <RadioButton
+            android:id="@+id/rdPerempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan" />
+    </RadioGroup>
+
+<!--  Tombol Add  -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/savebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_done"/>
+    </ScrollView>
+</RelativeLayout>
